@@ -1,0 +1,7 @@
+.footer {
+    height: 4rem;
+    background-color: var(--light-gray);
+    padding: 1rem;
+    box-sizing: border-box;
+    margin: 5rem 0 0;
+}
