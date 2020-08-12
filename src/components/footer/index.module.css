@@ -4,4 +4,25 @@
     padding: 1rem;
     box-sizing: border-box;
     margin: 5rem 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--ocean);
+    cursor: pointer;
+}
+
+.button:hover, .button:active, .button:focus {
+    color: var(--blue-sky);
+}
+
+.property {
+    font-size: .8rem;
+    color: var(--rosy);
 }

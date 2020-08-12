@@ -29,8 +29,34 @@
     justify-content: center;
 }
 
-.button {
+.buttonPrimary, .buttonSecondary {
+    background-color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: .8rem 2rem;
+    width: 15%;
+    border-radius: 2rem;
+    cursor: pointer;
+}
 
+.buttonPrimary {
+    border: .025rem solid var(--rosy);
+    color: var(--rosy);
+}
+
+.buttonSecondary {
+    border: .025rem solid var(--sunny);
+    color: var(--sunny);
+}
+
+.buttonPrimary:hover, .buttonPrimary:active, .buttonPrimary:focus {
+    color: #fff;
+    background-color: var(--rosy);
+}
+
+.buttonSecondary:hover, .buttonSecondary:active, .buttonSecondary:focus {
+    color: #000;
+    background-color: var(--sunny);
 }
 
 .info {
