@@ -2,13 +2,11 @@ import React from 'react';
 
 import styles from './index.module.css';
 
-export default function Session({ start, type, onStart }) {
-    const typeSession = type === 'session' ? 'Session' : 'Break';
-
+export default function Session({ start, currentSession, nextSession, onStart, onPause, onReset }) {
     return (
         <div className={styles.container}>
             <div className={styles.line}>
-                <p className={styles.title}>{ typeSession }</p>
+                <p className={styles.title}>{ currentSession }</p>
             </div>
 
             <div className={styles.counter}>
@@ -17,23 +15,23 @@ export default function Session({ start, type, onStart }) {
 
             {
                 start ? (
+                    <>
+                        <button className={styles.buttonPrimary} onClick={onPause}>
+                            <i className="fa fa-pause"/> Pause
+                        </button>
+
+                        <button className={styles.buttonSecondary} onClick={onReset}>
+                            <i className="fa fa-undo"/> Reset
+                        </button>
+                    </>
+            ) : (
                 <button className={styles.buttonPrimary} onClick={onStart}>
                     <i className="fa fa-play"/> Play
                 </button>
-            ) : (
-                <>
-                    <button className={styles.buttonPrimary}>
-                        <i className="fa fa-pause"/> Pause
-                    </button>
-
-                    <button className={styles.buttonSecondary}>
-                        <i className="fa fa-undo"/> Reset
-                    </button>
-                </>
-            )
+                )
             }
 
-            <p className={styles.info}><b>Break</b> 5 min</p>
+            <p className={styles.info}><b>{ nextSession }</b> 5 min</p>
         </div>
     );
 }
