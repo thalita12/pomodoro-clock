@@ -51,6 +51,3 @@ export default function Session({ start, pause, currentSession, nextSession, min
         </div>
     );
 }
-
-//https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks
-//https://www.w3schools.com/js/js_timing.asp
