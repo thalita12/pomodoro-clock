@@ -1,65 +1,23 @@
 .container {
-    text-align: center;
+  text-align: center;
 }
 
-.line, .counter, .info {
-    color: var(--ocean);
+.line,
+.info {
+  color: var(--ocean);
 }
 
 .line {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .title {
-    font-size: 2rem;
-}
-
-.counter {
-    font-size: 4.4rem;
-    background-color: rgba(127, 200, 248, .15);
-    font-weight: bold;
-    width: 17.5rem;
-    height: 17.5rem;
-    border-radius: 50%;
-    margin: 2rem auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.buttonPrimary, .buttonSecondary {
-    background-color: #fff;
-    font-size: 1.3rem;
-    font-weight: bold;
-    padding: .8rem 2rem;
-    width: 15%;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-.buttonPrimary {
-    border: .025rem solid var(--rosy);
-    color: var(--rosy);
-}
-
-.buttonSecondary {
-    border: .025rem solid var(--sunny);
-    color: var(--sunny);
-}
-
-.buttonPrimary:hover, .buttonPrimary:active, .buttonPrimary:focus {
-    color: #fff;
-    background-color: var(--rosy);
-}
-
-.buttonSecondary:hover, .buttonSecondary:active, .buttonSecondary:focus {
-    color: #000;
-    background-color: var(--sunny);
+  font-size: 2rem;
 }
 
 .info {
-    font-size: 1.5rem;
-    margin: 3rem 0 0;
+  font-size: 1.5rem;
+  margin: 3rem 0 0;
 }

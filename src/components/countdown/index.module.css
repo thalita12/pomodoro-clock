@@ -1,0 +1,13 @@
+.counter {
+  color: var(--ocean);
+  font-size: 4.4rem;
+  background-color: rgba(127, 200, 248, 0.15);
+  font-weight: bold;
+  width: 17.5rem;
+  height: 17.5rem;
+  border-radius: 50%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

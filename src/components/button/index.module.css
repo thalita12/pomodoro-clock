@@ -1,0 +1,33 @@
+.buttonPrimary,
+.buttonSecondary {
+  background-color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  width: 15%;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: 0;
+}
+
+.buttonPrimary {
+  background-color: var(--rosy);
+  color: #fff;
+}
+
+.buttonSecondary {
+  background-color: var(--sunny);
+  color: #000;
+}
+
+.buttonPrimary:hover,
+.buttonPrimary:active,
+.buttonPrimary:focus {
+  background-color: var(--rosy);
+}
+
+.buttonSecondary:hover,
+.buttonSecondary:active,
+.buttonSecondary:focus {
+  background-color: var(--sunny);
+}

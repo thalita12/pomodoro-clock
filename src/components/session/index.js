@@ -1,53 +1,44 @@
-import React from 'react';
+import React from 'react'
 
-import styles from './index.module.css';
+import Button from '../button'
+import Countdown from '../countdown'
 
-export default function Session({ start, pause, currentSession, nextSession, minutes, seconds, onStart, onPause, onReset, onContinue, onStop }) {
-    return (
-        <div className={styles.container}>
-            <div className={styles.line}>
-                <p className={styles.title}>{ currentSession }</p>
-            </div>
+import styles from './index.module.css'
 
-            <div className={styles.counter}>
-                { minutes }:{ seconds }
-            </div>
+export default function Session({
+  start,
+  pause,
+  currentSession,
+  nextSession,
+  minutes,
+  seconds,
+  onStart,
+  onPause,
+  onReset,
+  onContinue,
+  onStop,
+}) {
+  return (
+    <div className={styles.container}>
+      <div className={styles.line}>
+        <p className={styles.title}>{currentSession}</p>
+      </div>
 
-            {
-                !start ? (
-                    <button className={styles.buttonPrimary} onClick={onStart}>
-                        <i className="fa fa-play"/> Play
-                    </button>
-                ) : null
-            }
+      <Countdown minutes={minutes} seconds={seconds} />
 
-            {
-                start ? (
-                    <>
-                        {
-                            pause ? (
-                                <button className={styles.buttonSecondary} onClick={onContinue}>
-                                    <i className="fa fa-play"/> Continue
-                                </button>
-                            ) : (
-                                <button className={styles.buttonSecondary} onClick={onPause}>
-                                    <i className="fa fa-pause"/> Pause
-                                </button>
-                            )
-                        }
+      <Button
+        start={start}
+        pause={pause}
+        onStart={onStart}
+        onPause={onPause}
+        onReset={onReset}
+        onContinue={onContinue}
+        onStop={onStop}
+      />
 
-                        <button className={styles.buttonSecondary} onClick={onReset}>
-                            <i className="fa fa-undo"/> Reset
-                        </button>
-
-                        <button className={styles.buttonSecondary} onClick={onStop}>
-                            <i className="fa fa-stop"/> Stop
-                        </button>
-                    </>
-                ) : null
-            }
-
-            <p className={styles.info}><b>{ nextSession }</b> 5 min</p>
-        </div>
-    );
+      <p className={styles.info}>
+        <b>{nextSession}</b> 5 min
+      </p>
+    </div>
+  )
 }
