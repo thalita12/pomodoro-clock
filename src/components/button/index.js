@@ -13,7 +13,7 @@ const Button = ({pause, start, onContinue, onPause, onReset, onStart, onStop}) =
       ) : null}
 
       {start ? (
-        <>
+        <div className={styles.buttonArea}>
           {pause ? (
             <button className={styles.buttonSecondary} onClick={onContinue}>
               <i className="fa fa-play" /> Continue
@@ -31,7 +31,7 @@ const Button = ({pause, start, onContinue, onPause, onReset, onStart, onStop}) =
           <button className={styles.buttonSecondary} onClick={onStop}>
             <i className="fa fa-stop" /> Stop
           </button>
-        </>
+        </div>
       ) : null}
     </>
   )

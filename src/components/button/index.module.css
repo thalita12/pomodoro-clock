@@ -31,3 +31,39 @@
 .buttonSecondary:focus {
   background-color: var(--melon);
 }
+
+.buttonArea .buttonSecondary:nth-child(2) {
+  margin: 0 1rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 25%;
+  }
+
+  .buttonArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .buttonArea .buttonSecondary:nth-child(2) {
+    margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .buttonPrimary,
+  .buttonSecondary {
+    width: 100%;
+    font-size: 1rem;
+  }
+}

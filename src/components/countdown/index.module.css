@@ -11,3 +11,12 @@
   align-items: center;
   justify-content: center;
 }
+
+@media screen and (max-width: 500px) {
+  .counter {
+    font-size: 2.5rem;
+    width: 14.5rem;
+    height: 14.5rem;
+    margin: 1rem auto;
+  }
+}

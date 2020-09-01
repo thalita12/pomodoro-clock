@@ -3,10 +3,13 @@
   background-color: var(--light-gray);
   padding: 1rem;
   box-sizing: border-box;
-  margin: 5rem 0 0;
+  margin: 2rem 0 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .button {
