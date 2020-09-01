@@ -26,10 +26,10 @@ function App() {
       setSeconds(0)
     } else {
       if (seconds === 0) {
-        setMinutes((prevMinutes) => prevMinutes - 1)
+        setMinutes(prevMinutes => prevMinutes - 1)
         setSeconds(59)
       } else {
-        setSeconds((prevSeconds) => prevSeconds - 1)
+        setSeconds(prevSeconds => prevSeconds - 1)
       }
     }
   }, [minutes, seconds, currentSession, nextSession, pause])

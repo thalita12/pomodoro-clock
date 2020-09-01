@@ -4,8 +4,9 @@ import Button from '../button'
 import Countdown from '../countdown'
 
 import styles from './index.module.css'
+import PropTypes from 'prop-types'
 
-export default function Session({
+const Session = ({
   start,
   pause,
   currentSession,
@@ -16,8 +17,8 @@ export default function Session({
   onPause,
   onReset,
   onContinue,
-  onStop,
-}) {
+  onStop
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.line}>
@@ -42,3 +43,19 @@ export default function Session({
     </div>
   )
 }
+
+Session.propTypes = {
+  currentSession: PropTypes.string,
+  nextSession: PropTypes.string,
+  seconds: PropTypes.number,
+  minutes: PropTypes.number,
+  pause: PropTypes.bool,
+  start: PropTypes.bool,
+  onContinue: PropTypes.func,
+  onPause: PropTypes.func,
+  onReset: PropTypes.func,
+  onStart: PropTypes.func,
+  onStop: PropTypes.func
+}
+
+export default Session

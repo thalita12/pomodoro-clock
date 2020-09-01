@@ -11,7 +11,7 @@ const Countdown = ({seconds, minutes}) => {
   )
 }
 
-Countdown.protoTypes = {
+Countdown.propTypes = {
   seconds: PropTypes.number,
   minutes: PropTypes.number
 }

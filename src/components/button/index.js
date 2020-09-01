@@ -3,15 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './index.module.css'
 
-const Button = ({
-  pause,
-  start,
-  onContinue,
-  onPause,
-  onReset,
-  onStart,
-  onStop
-}) => {
+const Button = ({pause, start, onContinue, onPause, onReset, onStart, onStop}) => {
   return (
     <>
       {!start ? (
@@ -45,7 +37,7 @@ const Button = ({
   )
 }
 
-Button.protoTypes = {
+Button.propTypes = {
   pause: PropTypes.bool,
   start: PropTypes.bool,
   onContinue: PropTypes.func,
