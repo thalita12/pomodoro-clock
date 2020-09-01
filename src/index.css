@@ -1,9 +1,12 @@
 :root {
   --ocean: #5aa9e6;
+  --storm: #25618d;
   --blue-sky: #7fc8f8;
   --light-gray: #f9f9f9;
   --sunny: #ffe45e;
+  --melon: #f8d811;
   --rosy: #ff6392;
+  --petals: #fc2563;
 }
 
 body {

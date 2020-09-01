@@ -23,11 +23,11 @@
 .buttonPrimary:hover,
 .buttonPrimary:active,
 .buttonPrimary:focus {
-  background-color: var(--rosy);
+  background-color: var(--petals);
 }
 
 .buttonSecondary:hover,
 .buttonSecondary:active,
 .buttonSecondary:focus {
-  background-color: var(--sunny);
+  background-color: var(--melon);
 }
