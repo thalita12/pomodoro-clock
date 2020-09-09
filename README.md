@@ -23,7 +23,7 @@ In the project directory, you can run:
 
 ## References
 
-[https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks](https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks)  
-[https://www.w3schools.com/js/js_timing.asp](https://www.w3schools.com/js/js_timing.asp)  
+[setinterval in react components using hooks](https://upmostly.com/tutorials/setinterval-in-react-components-using-hooks)  
+[JavaScript Timing Events](https://www.w3schools.com/js/js_timing.asp)  
 [Redux: O que é? Do que se alimenta? É um monstro?](https://www.canva.com/design/DAEGYSYr9Dc/XNG7l0eC3miRM9OtXamTVA/view#1)  
 [Redux example](https://github.com/angelarf/redux-example)
