@@ -10,6 +10,7 @@ This project is part of the collection of 100 project ideas to practice developm
 ## To execute
 
 ### Development
+
 In the project directory, you can run:
 
 `npm start`: initialize the application and open http://localhost:3000 to view it in the browser.
@@ -17,6 +18,7 @@ In the project directory, you can run:
 `npm test`: runs the unit tests of the application.
 
 ### Deployment
+
 In the project directory, you can run:
 
 `npm run build`: minifies the files and generates the executable.

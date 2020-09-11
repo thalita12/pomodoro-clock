@@ -81,12 +81,6 @@ function App() {
       </h1>
 
       <Session
-        currentSession={currentSession}
-        nextSession={nextSession}
-        minutes={minutes}
-        seconds={seconds}
-        start={start}
-        pause={pause}
         onStart={handleStart}
         onPause={handlePause}
         onReset={handleReset}
