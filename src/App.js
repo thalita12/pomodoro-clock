@@ -14,16 +14,19 @@ function App() {
   const [pause, isPause] = useState(false)
   const [minutes, setMinutes] = useState(0)
   const [seconds, setSeconds] = useState(10)
+  const [nextMinutes, setNextMinutes] = useState(5)
 
   const counterSession = useCallback(() => {
     if (pause) return
 
     if (minutes === 0 && seconds === 0) {
       isStart(false)
-      setNextSession(currentSession)
-      setCurrentSession(nextSession)
-      setMinutes(5)
-      setSeconds(0)
+      setTimeout(() => {
+        setNextSession(currentSession)
+        setCurrentSession(nextSession)
+        setMinutes(5)
+        setSeconds(0)
+      }, 2000)
     } else {
       if (seconds === 0) {
         setMinutes(prevMinutes => prevMinutes - 1)
@@ -48,8 +51,10 @@ function App() {
 
     if (currentSession === SESSION) {
       setNextSession(BREAK)
+      setNextMinutes(5)
     } else {
       setNextSession(SESSION)
+      setNextMinutes(10)
     }
   }
 
@@ -81,6 +86,13 @@ function App() {
       </h1>
 
       <Session
+        nextSession={nextSession}
+        currentSession={currentSession}
+        minutes={minutes}
+        seconds={seconds}
+        start={start}
+        pause={pause}
+        nextMinutes={nextMinutes}
         onStart={handleStart}
         onPause={handlePause}
         onReset={handleReset}

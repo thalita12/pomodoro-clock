@@ -6,7 +6,8 @@ import {
   getCurrentSession,
   getNextSession,
   getMinutes,
-  getSeconds
+  getSeconds,
+  getClock
 } from '../../core/selectors'
 
 import Button from '../button'
@@ -22,6 +23,7 @@ const Session = ({
   nextSession,
   minutes,
   seconds,
+                   nextMinutes,
   onStart,
   onPause,
   onReset,
@@ -47,19 +49,20 @@ const Session = ({
       />
 
       <p className={styles.info}>
-        <b>{nextSession}</b> 5 min
+        <b>{nextSession}</b> {nextMinutes} min
       </p>
     </div>
   )
 }
 
 const mapStateToProps = state => ({
-  start: getStart(state),
-  pause: getPause(state),
-  currentSession: getCurrentSession(state),
-  nextSession: getNextSession(state),
-  minutes: getMinutes(state),
-  seconds: getSeconds(state)
+  // start: getStart(state),
+  // pause: getPause(state),
+  // currentSession: getCurrentSession(state),
+  // nextSession: getNextSession(state),
+  // minutes: getMinutes(state),
+  // seconds: getSeconds(state),
+  // clock: getClock(state)
 })
 
 Session.propTypes = {
@@ -67,6 +70,7 @@ Session.propTypes = {
   nextSession: PropTypes.string,
   seconds: PropTypes.number,
   minutes: PropTypes.number,
+  nextMinutes: PropTypes.number,
   pause: PropTypes.bool,
   start: PropTypes.bool,
   onContinue: PropTypes.func,

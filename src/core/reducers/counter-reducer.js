@@ -15,3 +15,12 @@ export const currentSessionReducer = (state = 'SESSION', {type}) => {
       return state
   }
 }
+
+export const clock = (state = 'SESSION', {type}) => {
+  switch (type) {
+    case 'NEXT_SESSION':
+      return state
+    default:
+      return state
+  }
+}
