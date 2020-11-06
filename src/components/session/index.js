@@ -1,14 +1,4 @@
 import React from 'react'
-import {connect} from 'react-redux'
-import {
-  getStart,
-  getPause,
-  getCurrentSession,
-  getNextSession,
-  getMinutes,
-  getSeconds,
-  getClock
-} from '../../core/selectors'
 
 import Button from '../button'
 import Countdown from '../countdown'
@@ -23,7 +13,7 @@ const Session = ({
   nextSession,
   minutes,
   seconds,
-                   nextMinutes,
+  nextMinutes,
   onStart,
   onPause,
   onReset,
@@ -55,16 +45,6 @@ const Session = ({
   )
 }
 
-const mapStateToProps = state => ({
-  // start: getStart(state),
-  // pause: getPause(state),
-  // currentSession: getCurrentSession(state),
-  // nextSession: getNextSession(state),
-  // minutes: getMinutes(state),
-  // seconds: getSeconds(state),
-  // clock: getClock(state)
-})
-
 Session.propTypes = {
   currentSession: PropTypes.string,
   nextSession: PropTypes.string,
@@ -80,4 +60,4 @@ Session.propTypes = {
   onStop: PropTypes.func
 }
 
-export default connect(mapStateToProps)(Session)
+export default Session

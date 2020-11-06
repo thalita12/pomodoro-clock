@@ -12,8 +12,8 @@ function App() {
   const [nextSession, setNextSession] = useState(BREAK)
   const [start, isStart] = useState(false)
   const [pause, isPause] = useState(false)
-  const [minutes, setMinutes] = useState(0)
-  const [seconds, setSeconds] = useState(10)
+  const [minutes, setMinutes] = useState(25)
+  const [seconds, setSeconds] = useState(0)
   const [nextMinutes, setNextMinutes] = useState(5)
 
   const counterSession = useCallback(() => {

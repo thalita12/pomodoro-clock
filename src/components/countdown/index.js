@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from './index.module.css'
 
-const formatNumber = (value) => {
+const formatNumber = value => {
   return String(value).padStart(2, '0')
 }
 
