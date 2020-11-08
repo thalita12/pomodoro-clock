@@ -1,5 +1,7 @@
 import React, {useCallback, useEffect, useState} from 'react'
 
+import {playAudio, pauseAudio} from './common/utils/sound'
+
 import Session from './components/session'
 import Footer from './components/footer'
 
@@ -12,8 +14,8 @@ function App() {
   const [nextSession, setNextSession] = useState(BREAK)
   const [start, isStart] = useState(false)
   const [pause, isPause] = useState(false)
-  const [minutes, setMinutes] = useState(25)
-  const [seconds, setSeconds] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSeconds] = useState(5)
   const [nextMinutes, setNextMinutes] = useState(5)
 
   const counterSession = useCallback(() => {
@@ -21,11 +23,13 @@ function App() {
 
     if (minutes === 0 && seconds === 0) {
       isStart(false)
+      playAudio()
       setTimeout(() => {
         setNextSession(currentSession)
         setCurrentSession(nextSession)
         setMinutes(5)
         setSeconds(0)
+        pauseAudio()
       }, 2000)
     } else {
       if (seconds === 0) {
@@ -80,28 +84,30 @@ function App() {
   }
 
   return (
-    <div className="app">
-      <h1 className="title">
-        <strong>Pomodoro Clock</strong>
-      </h1>
+    <>
+      <div className="app">
+        <h1 className="title">
+          <strong>Pomodoro Clock</strong>
+        </h1>
 
-      <Session
-        nextSession={nextSession}
-        currentSession={currentSession}
-        minutes={minutes}
-        seconds={seconds}
-        start={start}
-        pause={pause}
-        nextMinutes={nextMinutes}
-        onStart={handleStart}
-        onPause={handlePause}
-        onReset={handleReset}
-        onContinue={handleContinue}
-        onStop={handleStop}
-      />
+        <Session
+          nextSession={nextSession}
+          currentSession={currentSession}
+          minutes={minutes}
+          seconds={seconds}
+          start={start}
+          pause={pause}
+          nextMinutes={nextMinutes}
+          onStart={handleStart}
+          onPause={handlePause}
+          onReset={handleReset}
+          onContinue={handleContinue}
+          onStop={handleStop}
+        />
+      </div>
 
       <Footer />
-    </div>
+    </>
   )
 }
 
