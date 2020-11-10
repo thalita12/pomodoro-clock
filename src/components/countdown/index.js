@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import PropTypes from 'prop-types'
 
 import styles from './index.module.css'
@@ -8,9 +8,16 @@ const formatNumber = value => {
 }
 
 const Countdown = ({seconds, minutes}) => {
+  const formattedSeconds = formatNumber(seconds)
+  const formattedMinutes = formatNumber(minutes)
+
+  useEffect(() => {
+    document.title = `${formattedMinutes}:${formattedSeconds} | Pomodoro Clock`
+  }, [formattedSeconds, formattedMinutes])
+
   return (
     <div className={styles.counter}>
-      {formatNumber(minutes)}:{formatNumber(seconds)}
+      {formattedMinutes}:{formattedSeconds}
     </div>
   )
 }

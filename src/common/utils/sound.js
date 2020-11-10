@@ -1,17 +1,7 @@
-const sound = document.createElement('audio')
-sound.src = '../../../public/audio/horse.ogv'
-sound.setAttribute('preload', 'auto')
-sound.setAttribute('controls', 'none')
-// sound.style.display = 'none'
+import sound from '../../assets/audio/ting.mp3'
 
-document.body.appendChild(sound)
+const likeAudio = new Audio(sound)
 
-const playAudio = () => {
-  sound.play()
-}
+export const playSound = () => likeAudio.play()
 
-const pauseAudio = () => {
-  sound.pause()
-}
-
-export {playAudio, pauseAudio}
+export const pauseSound = () => likeAudio.pause()

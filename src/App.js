@@ -1,6 +1,6 @@
 import React, {useCallback, useEffect, useState} from 'react'
 
-import {playAudio, pauseAudio} from './common/utils/sound'
+import {playSound, pauseSound} from './common/utils/sound'
 
 import Session from './components/session'
 import Footer from './components/footer'
@@ -23,13 +23,13 @@ function App() {
 
     if (minutes === 0 && seconds === 0) {
       isStart(false)
-      playAudio()
+      playSound()
       setTimeout(() => {
         setNextSession(currentSession)
         setCurrentSession(nextSession)
         setMinutes(5)
         setSeconds(0)
-        pauseAudio()
+        pauseSound()
       }, 2000)
     } else {
       if (seconds === 0) {
